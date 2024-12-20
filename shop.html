@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelly Jewelry</title>
+  
+    <link rel="shortcut icon" href="img/alliance.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo"> <img src="img/alliance.png" class="logo-icon" alt="">Jelly Jewelry</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div id="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i></div>
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+            <button class="user-btn">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="shop-page">
+        <div class="categories">
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-gem"></i>
+                All
+            </button>
+            <button class="category-btn" data-category="bracelets">
+                <i class="fas fa-link"></i>
+                Bracelets
+            </button>
+            <button class="category-btn" data-category="rings">
+                <i class="fa-solid fa-ring"></i>
+                Rings
+            </button>
+            <button class="category-btn" data-category="necklaces">
+                <i class="fas fa-heart"></i>
+                Necklaces
+            </button>
+            <button class="category-btn" data-category="earrings">
+                <i class="fas fa-dot-circle"></i>
+                Earrings
+            </button>
+            <button class="category-btn" data-category="sets">
+                <i class="fas fa-boxes"></i>
+                Sets
+            </button>
+        </div>
+
+        <div class="filters">
+            <select id="sort-filter">
+                <option value="default">Sort by</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name">Name</option>
+            </select>
+            <div class="price-filter">
+                <input type="range" id="price-range" min="0" max="1000" step="10">
+                <span id="price-value">Max Price: 250000 DA</span>
+            </div>
+        </div>
+
+        <div class="shop-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+
+  <!--footer-->
+<footer class="footer">
+    <div class="footer-logo">Jelly Jewelry</div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-section">About</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Luxe Jewelry. All rights reserved.</p>
+                </div>
+    </footer>
+
+
+<!-- Modals -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Shopping Cart</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <p>Total:<span id="cart-total-amount">0</span> Da</p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<section id="auth-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Login</button>
+            <button class="auth-tab" data-tab="register">Register</button>
+        </div>
+        <form id="login-form" class="auth-form active">
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <form id="register-form" class="auth-form">
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</section>
+
+<div id="menu-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeMenuModal()">&times;</span>
+        <ul class="modal-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+    
+    <script type="module" src="shop.js"></script>
+    </body>
+    </html>

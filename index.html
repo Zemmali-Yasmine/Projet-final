@@ -1,120 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!--Link to CSS-->
-  <link rel="stylesheet" href="style.css">
-  <!--Box Icons-->
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelly Jewelry</title>
+    <link rel="shortcut icon" href="img/alliance.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-<nav>
-  <a href="#" class="logo"> <img src="img/alliance.png" class="logo-icon" alt="">Jelly Jewelry</a>
-  <ul class="navbar">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#contacts">Contacts</a></li>
-  </ul>
+    <nav class="navbar">
+        <a class="logo"> <img src="img/alliance.png" class="logo-icon" alt="">Jelly Jewelry</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div id="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i></div>
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+            <button class="user-btn">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </nav>
 
-<!--Icons-->
-<div class="header-icons">
-    <i class='bx bx-menu' id='menu-icon'></i>
-    <a href="Cart.html" id="carlt-link"><i class='bx bx-cart-alt' id='carlt-icon'></i></a>
-    <i class='bx bx-user' id='user-icon'></i>
-  </div>
-
-  <div class="user">
-    <h2>login Now</h2>
-    <input type="email" placeholder="Your Email...">
-    <input type="password" name="password" id="password" placeholder="password">
-    <input type="submit" value="login" class="login-btn">
-    <p>Forget Password <a href="#">Reset Now</a></p>
-    <p>Don't have accouant <a href="Create One.html">Create One</a></p>
-  </div>
-</nav>
-
- <!-- Slider -->
- <div class="slider">
-  <div class="slide active">
-      <div class="content">
-          <h1>Winter Collection<br>For Women</h1>
-          <p>We are more than just an online shopping destination; we’re your personal gateway to fashion trends.</p>
-          <button>Shop Now</button>
-      </div>
-      <div class="image"><img src="img/pexels-secret-garden-333350-2879829.jpg" alt=""></div>
-  </div>
-  <div class="slide">
-      <div class="content">
-          <h1>Summer Vibes<br>Are Here</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam et perspiciatis itaque hic officia doloremque aliquid, enim nemo ab in quidem, odit pariatur.</p>
-          <button>Shop Now</button>
-      </div>
-      <div class="image"><img src="img/img 01.jpg" alt=""></div>
-  </div>
-  <div class="slide">
-      <div class="content">
-          <h1>Elegant Styles<br>Just For You</h1>
-          <p>Step into elegance with exclusive styles tailored to your taste and individuality.</p>
-          <button>Shop Now</button>
-      </div>
-      <div class="image"><img src="img/img 02.jpg" alt=""></div>
-  </div>
-</div>
-
-<!-- Slider Navigation -->
-<div class="slider-nav">
-  <span class="dot active"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
-
-
-
-
+    <main>
+        <section id="home" class="hero">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/img 04.jpg" alt="Luxury Necklace">
+                        <div class="slide-content">
+                            <h2>Elegant Collections</h2>
+                            <p>Discover our finest jewelry pieces</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/img 01.jpg" alt="Diamond Ring">
+                        <div class="slide-content">
+                            <h2>Timeless Beauty</h2>
+                            <p>Handcrafted with passion</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/img 02.jpg" alt="Gold Bracelet">
+                        <div class="slide-content">
+                            <h2>Modern Designs</h2>
+                            <p>For the contemporary woman</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev">❮</button>
+                <button class="slider-btn next">❯</button>
+            </div>
+        </section>
 <!--About section-->
-<section class="about-section">
-  <h1 class="section-title">ABOUT</h1>
-
-  <div class="about-content">
-      <div class="text-column">
-          <h2>About store</h2>
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rerum, atque eaque dolore sequi dolor aspernatur veniam blanditiis, odio ipsa, ex officia asperiores?
-          </p>
-          <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam atque excepturi quo molestiae consequuntur tempora odio modi ratione! Commodi quia omnis adipisci ipsam autem aliquam corrupti rem facere sequi nobis nemo perspiciatis fuga, inventore accusantium beatae in?
-          </p>
+<section id="about-section">
+    <h1 class="section-title">About</h1>
+  
+    <div class="about-content">
+      <div class="text-block">
+        <h2>About Store</h2>
+        <p>
+            at <strong>Jelly Jewelry</strong>, we create timeless pieces that combine modern elegance and simplicity.
+            Crafted with care and high-quality materials, our jewelry is designed to elevate your everyday moments and celebrate your individuality.</p><br> <p class="slogan"><em>Because true beauty lies in simplicity.</em></p>
+        
       </div>
-
-      <div class="images-row">
-          <img src="img/pexels-secret-garden-333350-2879829.jpg" alt="Jewelry Item 1" class="image-left">
-          <img src="img/img 02.jpg" alt="Model Wearing Jewelry" class="image-right">
+  
+      <div class="img-left"><img src="img/img 06.jpg" alt="Jewelry Item"></div>
+      <div class="img-right"><img src="img/img 03.jpg" alt="Jewelry Model"></div>
+    </div>
+  
+    <div class="goal-section">
+      <div class="img-goal"><img src="img/img 05.jpg" alt="Jewelry Item"></div>
+      <div class="goal-text">
+        <h2>Main Goal</h2>
+        <p>
+            Our mission at Jelly Jewelry is to redefine elegance with simplicity.
+            We aim to provide timeless jewelry pieces that not only enhance your style but also resonate with your individuality. By blending modern designs with durable craftsmanship, we strive to create accessories that inspire confidence, celebrate life's milestones, and become enduring symbols of beauty.</p>
+            <br><p class="slogan"><em>Jelly Jewelry — where elegance meets purpose, and simplicity shines through.</em>
       </div>
+    </div>
+  </section>
+<!--New-collection section-->
+        <section class="new-collection">
+            <h2 class="newcollection">New Collection</h2>
+            <div class="products-grid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
 
-      <div class="goal-section">
-          <img src="img/img 02.jpg" alt="Jewelry Item 2" class="image-goal">
-          <div class="goal-text">
-              <h2>Main goal</h2>
-              <p>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem dolores praesentium quibusdam dolor modi. Eum dolore praesentium culpa id laborum aliquam veniam est voluptate nulla quia explicabo nemo, et error officia tempora voluptatum dicta laudantium, veritatis quam omnis obcaecati iure! Reiciendis quibusdam molestiae maiores corrupti nihil repellendus vel delectus dolorem necessitatibus accusantium soluta ut nam suscipit, tenetur nulla, tempora odio? Ad et enim adipisci ducimus necessitatibus odit odio in perspiciatis reiciendis nihil non maiores iusto aut delectus, ex voluptatem dolores! Tempora totam ullam repellat illo animi quasi possimus deleniti tempore minima enim nostrum, ex sed facere eum nam quidem impedit sint ipsa neque iusto. Reprehenderit cumque accusamus eius tempore quos quas fuga ducimus? Sequi error modi dicta. Impedit, rem dolores 
-              </p>
-              <p class="note">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore mollitia aperiam qui minus eligendi?
-              </p>
-          </div>
-      </div>
-  </div>
+
+
+<!--Gallery section-->
+       <section class="auto-container">
+ <div class="sec-title centered"><h2 class="gallery-titre">Gallery</h2></div>
+    <div class="fixed-gallery-box">
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(bleu.jpg)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(chatpo.gif)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(jude.jpg)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(sky.jpg)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(tromm.jpg)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(vert.jpg)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gallery Item-->
+        <div class="gallery-item">
+            <div class="inner-box">
+                <div class="image-box">
+                    <div class="image-layer" style="background-image: url(Xing.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </section>
 
 
 
 
+<!--Newsletter section-->
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+<!--Contact section-->
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Feel free to reach out. We’d love to hear from you!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+<!--footer-->
+<footer class="footer">
+    <div class="footer-logo">Jelly Jewelry</div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-section">About</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Luxe Jewelry. All rights reserved.</p>
+                </div>
+    </footer>
 
 
-<script src="script.js"></script>
+<!-- Modals -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Shopping Cart</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <p>Total:<span id="cart-total-amount">0</span> DA</p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<section id="auth-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Login</button>
+            <button class="auth-tab" data-tab="register">Register</button>
+        </div>
+        <form id="login-form" class="auth-form active">
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <form id="register-form" class="auth-form">
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</section>
+
+<div id="menu-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeMenuModal()">&times;</span>
+        <ul class="modal-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<script type="module" src="index.js"></script>
 </body>
 </html>
